@@ -1,0 +1,6 @@
+sentence-transformers>=3.0
+numpy
+fastapi
+uvicorn[standard]
+# Mac 上 pip 会自动装支持 MPS 的 torch，无需特别指定
+# 可选：Ollama (https://ollama.com) 装好后 `ollama pull qwen3:8b` 用于查询改写

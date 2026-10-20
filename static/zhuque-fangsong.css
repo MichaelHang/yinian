@@ -1,0 +1,1688 @@
+/* Zhuque Fangsong / 朱雀仿宋 Webfonts
+ * Upstream: https://github.com/TrionesType/zhuque release v0.212 (prerelease / technical preview)
+ * Generated CSS; do not edit manually.
+ * Chunk size: 256 codepoints.
+ */
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-000000.woff2') format('woff2');
+  unicode-range: U+0000-00FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-000100.woff2') format('woff2');
+  unicode-range: U+0100-01FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-000200.woff2') format('woff2');
+  unicode-range: U+0200-02FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-000300.woff2') format('woff2');
+  unicode-range: U+0300-03FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-000400.woff2') format('woff2');
+  unicode-range: U+0400-04FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-000500.woff2') format('woff2');
+  unicode-range: U+0500-05FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-001e00.woff2') format('woff2');
+  unicode-range: U+1E00-1EFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-001f00.woff2') format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-002000.woff2') format('woff2');
+  unicode-range: U+2000-20FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-002100.woff2') format('woff2');
+  unicode-range: U+2100-21FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-002200.woff2') format('woff2');
+  unicode-range: U+2200-22FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-002500.woff2') format('woff2');
+  unicode-range: U+2500-25FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-002600.woff2') format('woff2');
+  unicode-range: U+2600-26FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-002700.woff2') format('woff2');
+  unicode-range: U+2700-27FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-002b00.woff2') format('woff2');
+  unicode-range: U+2B00-2BFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-003000.woff2') format('woff2');
+  unicode-range: U+3000-30FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-003400.woff2') format('woff2');
+  unicode-range: U+3400-34FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-003500.woff2') format('woff2');
+  unicode-range: U+3500-35FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-003600.woff2') format('woff2');
+  unicode-range: U+3600-36FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-003700.woff2') format('woff2');
+  unicode-range: U+3700-37FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-003800.woff2') format('woff2');
+  unicode-range: U+3800-38FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-003900.woff2') format('woff2');
+  unicode-range: U+3900-39FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-003a00.woff2') format('woff2');
+  unicode-range: U+3A00-3AFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-003b00.woff2') format('woff2');
+  unicode-range: U+3B00-3BFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-003c00.woff2') format('woff2');
+  unicode-range: U+3C00-3CFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-003d00.woff2') format('woff2');
+  unicode-range: U+3D00-3DFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-003e00.woff2') format('woff2');
+  unicode-range: U+3E00-3EFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-003f00.woff2') format('woff2');
+  unicode-range: U+3F00-3FFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-004000.woff2') format('woff2');
+  unicode-range: U+4000-40FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-004100.woff2') format('woff2');
+  unicode-range: U+4100-41FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-004300.woff2') format('woff2');
+  unicode-range: U+4300-43FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-004400.woff2') format('woff2');
+  unicode-range: U+4400-44FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-004500.woff2') format('woff2');
+  unicode-range: U+4500-45FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-004700.woff2') format('woff2');
+  unicode-range: U+4700-47FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-004800.woff2') format('woff2');
+  unicode-range: U+4800-48FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-004900.woff2') format('woff2');
+  unicode-range: U+4900-49FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-004c00.woff2') format('woff2');
+  unicode-range: U+4C00-4CFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-004d00.woff2') format('woff2');
+  unicode-range: U+4D00-4DFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-004e00.woff2') format('woff2');
+  unicode-range: U+4E00-4EFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-004f00.woff2') format('woff2');
+  unicode-range: U+4F00-4FFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-005000.woff2') format('woff2');
+  unicode-range: U+5000-50FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-005100.woff2') format('woff2');
+  unicode-range: U+5100-51FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-005200.woff2') format('woff2');
+  unicode-range: U+5200-52FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-005300.woff2') format('woff2');
+  unicode-range: U+5300-53FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-005400.woff2') format('woff2');
+  unicode-range: U+5400-54FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-005500.woff2') format('woff2');
+  unicode-range: U+5500-55FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-005600.woff2') format('woff2');
+  unicode-range: U+5600-56FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-005700.woff2') format('woff2');
+  unicode-range: U+5700-57FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-005800.woff2') format('woff2');
+  unicode-range: U+5800-58FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-005900.woff2') format('woff2');
+  unicode-range: U+5900-59FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-005a00.woff2') format('woff2');
+  unicode-range: U+5A00-5AFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-005b00.woff2') format('woff2');
+  unicode-range: U+5B00-5BFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-005c00.woff2') format('woff2');
+  unicode-range: U+5C00-5CFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-005d00.woff2') format('woff2');
+  unicode-range: U+5D00-5DFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-005e00.woff2') format('woff2');
+  unicode-range: U+5E00-5EFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-005f00.woff2') format('woff2');
+  unicode-range: U+5F00-5FFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-006000.woff2') format('woff2');
+  unicode-range: U+6000-60FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-006100.woff2') format('woff2');
+  unicode-range: U+6100-61FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-006200.woff2') format('woff2');
+  unicode-range: U+6200-62FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-006300.woff2') format('woff2');
+  unicode-range: U+6300-63FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-006400.woff2') format('woff2');
+  unicode-range: U+6400-64FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-006500.woff2') format('woff2');
+  unicode-range: U+6500-65FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-006600.woff2') format('woff2');
+  unicode-range: U+6600-66FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-006700.woff2') format('woff2');
+  unicode-range: U+6700-67FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-006800.woff2') format('woff2');
+  unicode-range: U+6800-68FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-006900.woff2') format('woff2');
+  unicode-range: U+6900-69FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-006a00.woff2') format('woff2');
+  unicode-range: U+6A00-6AFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-006b00.woff2') format('woff2');
+  unicode-range: U+6B00-6BFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-006c00.woff2') format('woff2');
+  unicode-range: U+6C00-6CFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-006d00.woff2') format('woff2');
+  unicode-range: U+6D00-6DFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-006e00.woff2') format('woff2');
+  unicode-range: U+6E00-6EFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-006f00.woff2') format('woff2');
+  unicode-range: U+6F00-6FFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-007000.woff2') format('woff2');
+  unicode-range: U+7000-70FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-007100.woff2') format('woff2');
+  unicode-range: U+7100-71FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-007200.woff2') format('woff2');
+  unicode-range: U+7200-72FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-007300.woff2') format('woff2');
+  unicode-range: U+7300-73FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-007400.woff2') format('woff2');
+  unicode-range: U+7400-74FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-007500.woff2') format('woff2');
+  unicode-range: U+7500-75FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-007600.woff2') format('woff2');
+  unicode-range: U+7600-76FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-007700.woff2') format('woff2');
+  unicode-range: U+7700-77FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-007800.woff2') format('woff2');
+  unicode-range: U+7800-78FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-007900.woff2') format('woff2');
+  unicode-range: U+7900-79FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-007a00.woff2') format('woff2');
+  unicode-range: U+7A00-7AFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-007b00.woff2') format('woff2');
+  unicode-range: U+7B00-7BFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-007c00.woff2') format('woff2');
+  unicode-range: U+7C00-7CFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-007d00.woff2') format('woff2');
+  unicode-range: U+7D00-7DFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-007e00.woff2') format('woff2');
+  unicode-range: U+7E00-7EFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-007f00.woff2') format('woff2');
+  unicode-range: U+7F00-7FFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-008000.woff2') format('woff2');
+  unicode-range: U+8000-80FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-008100.woff2') format('woff2');
+  unicode-range: U+8100-81FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-008200.woff2') format('woff2');
+  unicode-range: U+8200-82FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-008300.woff2') format('woff2');
+  unicode-range: U+8300-83FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-008400.woff2') format('woff2');
+  unicode-range: U+8400-84FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-008500.woff2') format('woff2');
+  unicode-range: U+8500-85FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-008600.woff2') format('woff2');
+  unicode-range: U+8600-86FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-008700.woff2') format('woff2');
+  unicode-range: U+8700-87FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-008800.woff2') format('woff2');
+  unicode-range: U+8800-88FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-008900.woff2') format('woff2');
+  unicode-range: U+8900-89FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-008a00.woff2') format('woff2');
+  unicode-range: U+8A00-8AFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-008b00.woff2') format('woff2');
+  unicode-range: U+8B00-8BFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-008c00.woff2') format('woff2');
+  unicode-range: U+8C00-8CFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-008d00.woff2') format('woff2');
+  unicode-range: U+8D00-8DFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-008e00.woff2') format('woff2');
+  unicode-range: U+8E00-8EFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-008f00.woff2') format('woff2');
+  unicode-range: U+8F00-8FFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-009000.woff2') format('woff2');
+  unicode-range: U+9000-90FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-009100.woff2') format('woff2');
+  unicode-range: U+9100-91FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-009200.woff2') format('woff2');
+  unicode-range: U+9200-92FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-009300.woff2') format('woff2');
+  unicode-range: U+9300-93FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-009400.woff2') format('woff2');
+  unicode-range: U+9400-94FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-009500.woff2') format('woff2');
+  unicode-range: U+9500-95FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-009600.woff2') format('woff2');
+  unicode-range: U+9600-96FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-009700.woff2') format('woff2');
+  unicode-range: U+9700-97FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-009800.woff2') format('woff2');
+  unicode-range: U+9800-98FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-009900.woff2') format('woff2');
+  unicode-range: U+9900-99FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-009a00.woff2') format('woff2');
+  unicode-range: U+9A00-9AFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-009b00.woff2') format('woff2');
+  unicode-range: U+9B00-9BFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-009c00.woff2') format('woff2');
+  unicode-range: U+9C00-9CFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-009d00.woff2') format('woff2');
+  unicode-range: U+9D00-9DFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-009e00.woff2') format('woff2');
+  unicode-range: U+9E00-9EFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-009f00.woff2') format('woff2');
+  unicode-range: U+9F00-9FFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-00a700.woff2') format('woff2');
+  unicode-range: U+A700-A7FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-00fb00.woff2') format('woff2');
+  unicode-range: U+FB00-FBFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-00fe00.woff2') format('woff2');
+  unicode-range: U+FE00-FEFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-00ff00.woff2') format('woff2');
+  unicode-range: U+FF00-FFFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-020100.woff2') format('woff2');
+  unicode-range: U+20100-201FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-020600.woff2') format('woff2');
+  unicode-range: U+20600-206FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-020b00.woff2') format('woff2');
+  unicode-range: U+20B00-20BFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-020c00.woff2') format('woff2');
+  unicode-range: U+20C00-20CFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-021300.woff2') format('woff2');
+  unicode-range: U+21300-213FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-021400.woff2') format('woff2');
+  unicode-range: U+21400-214FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-023500.woff2') format('woff2');
+  unicode-range: U+23500-235FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-023c00.woff2') format('woff2');
+  unicode-range: U+23C00-23CFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-023e00.woff2') format('woff2');
+  unicode-range: U+23E00-23EFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-024900.woff2') format('woff2');
+  unicode-range: U+24900-249FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-024a00.woff2') format('woff2');
+  unicode-range: U+24A00-24AFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-025500.woff2') format('woff2');
+  unicode-range: U+25500-255FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-025e00.woff2') format('woff2');
+  unicode-range: U+25E00-25EFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-026200.woff2') format('woff2');
+  unicode-range: U+26200-262FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-026400.woff2') format('woff2');
+  unicode-range: U+26400-264FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-026600.woff2') format('woff2');
+  unicode-range: U+26600-266FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-026700.woff2') format('woff2');
+  unicode-range: U+26700-267FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-026b00.woff2') format('woff2');
+  unicode-range: U+26B00-26BFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-026c00.woff2') format('woff2');
+  unicode-range: U+26C00-26CFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-027f00.woff2') format('woff2');
+  unicode-range: U+27F00-27FFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-028400.woff2') format('woff2');
+  unicode-range: U+28400-284FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-028600.woff2') format('woff2');
+  unicode-range: U+28600-286FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-028700.woff2') format('woff2');
+  unicode-range: U+28700-287FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-028b00.woff2') format('woff2');
+  unicode-range: U+28B00-28BFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-028c00.woff2') format('woff2');
+  unicode-range: U+28C00-28CFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-028e00.woff2') format('woff2');
+  unicode-range: U+28E00-28EFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-029f00.woff2') format('woff2');
+  unicode-range: U+29F00-29FFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02a700.woff2') format('woff2');
+  unicode-range: U+2A700-2A7FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02a800.woff2') format('woff2');
+  unicode-range: U+2A800-2A8FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02a900.woff2') format('woff2');
+  unicode-range: U+2A900-2A9FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02aa00.woff2') format('woff2');
+  unicode-range: U+2AA00-2AAFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02ab00.woff2') format('woff2');
+  unicode-range: U+2AB00-2ABFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02af00.woff2') format('woff2');
+  unicode-range: U+2AF00-2AFFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02b100.woff2') format('woff2');
+  unicode-range: U+2B100-2B1FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02b300.woff2') format('woff2');
+  unicode-range: U+2B300-2B3FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02b400.woff2') format('woff2');
+  unicode-range: U+2B400-2B4FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02b500.woff2') format('woff2');
+  unicode-range: U+2B500-2B5FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02b600.woff2') format('woff2');
+  unicode-range: U+2B600-2B6FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02b700.woff2') format('woff2');
+  unicode-range: U+2B700-2B7FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02b800.woff2') format('woff2');
+  unicode-range: U+2B800-2B8FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02ba00.woff2') format('woff2');
+  unicode-range: U+2BA00-2BAFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02bb00.woff2') format('woff2');
+  unicode-range: U+2BB00-2BBFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02bc00.woff2') format('woff2');
+  unicode-range: U+2BC00-2BCFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02bd00.woff2') format('woff2');
+  unicode-range: U+2BD00-2BDFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02be00.woff2') format('woff2');
+  unicode-range: U+2BE00-2BEFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02c000.woff2') format('woff2');
+  unicode-range: U+2C000-2C0FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02c100.woff2') format('woff2');
+  unicode-range: U+2C100-2C1FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02c200.woff2') format('woff2');
+  unicode-range: U+2C200-2C2FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02c300.woff2') format('woff2');
+  unicode-range: U+2C300-2C3FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02c400.woff2') format('woff2');
+  unicode-range: U+2C400-2C4FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02c500.woff2') format('woff2');
+  unicode-range: U+2C500-2C5FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02c600.woff2') format('woff2');
+  unicode-range: U+2C600-2C6FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02c700.woff2') format('woff2');
+  unicode-range: U+2C700-2C7FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02c800.woff2') format('woff2');
+  unicode-range: U+2C800-2C8FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02c900.woff2') format('woff2');
+  unicode-range: U+2C900-2C9FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02ca00.woff2') format('woff2');
+  unicode-range: U+2CA00-2CAFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02cb00.woff2') format('woff2');
+  unicode-range: U+2CB00-2CBFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02cc00.woff2') format('woff2');
+  unicode-range: U+2CC00-2CCFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02cd00.woff2') format('woff2');
+  unicode-range: U+2CD00-2CDFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02ce00.woff2') format('woff2');
+  unicode-range: U+2CE00-2CEFF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02d300.woff2') format('woff2');
+  unicode-range: U+2D300-2D3FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02e700.woff2') format('woff2');
+  unicode-range: U+2E700-2E7FF;
+}
+
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ZhuqueFangsong-400-02f800.woff2') format('woff2');
+  unicode-range: U+2F800-2F8FF;
+}

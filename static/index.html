@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一念 · 以心相求</title>
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="/static/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/static/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+<meta name="theme-color" content="#b13a2a">
+<!-- 朱雀仿宋 webfont（OFL 开源）：187 分片按 unicode-range 按需加载，缺字自动回退宋体 -->
+<link rel="stylesheet" href="/static/zhuque-fangsong.css">
+<style>
+  :root {
+    --paper: #f4efe1;
+    --paper-card: #faf6ea;
+    --ink: #2d2a24;
+    --ink-soft: #6b6152;
+    --ink-faint: #a89c85;
+    --line: #d9cfb6;
+    --cinnabar: #b13a2a;
+    --cinnabar-dark: #8e2d20;
+    --font-fs: "Zhuque Fangsong", "Songti SC", "Noto Serif SC", "Source Han Serif SC",
+               "STSong", "SimSun", "宋体", serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background:
+      radial-gradient(ellipse at 50% -10%, rgba(255,253,244,.9), transparent 55%),
+      radial-gradient(ellipse at 85% 110%, rgba(210,196,160,.35), transparent 50%),
+      radial-gradient(ellipse at 10% 90%, rgba(210,196,160,.3), transparent 45%),
+      var(--paper);
+    color: var(--ink);
+    font-family: "Songti SC", "Noto Serif SC", "Source Han Serif SC", "STSong",
+                 "SimSun", "宋体", serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .wrap { width: 100%; max-width: 780px; padding: 0 20px; }
+
+  /* ── 页眉 ─────────────────────────── */
+  header { text-align: center; padding: 64px 0 8px; position: relative; }
+  .title-row { display: inline-flex; align-items: flex-start; gap: 14px; }
+  h1 {
+    font-size: clamp(40px, 7vw, 56px);
+    font-weight: 600;
+    letter-spacing: .5em;
+    margin-right: -.5em; /* 抵消末字间距 */
+  }
+  .seal {
+    width: 30px; height: 30px;
+    background: var(--cinnabar);
+    color: #f7f1e3;
+    font-size: 17px;
+    line-height: 30px;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 rgba(0,0,0,.15);
+    margin-top: 6px;
+    user-select: none;
+  }
+  .subtitle {
+    margin-top: 14px;
+    color: var(--ink-soft);
+    font-size: 15px;
+    letter-spacing: .2em;
+  }
+  .subtitle .dot { color: var(--cinnabar); margin: 0 10px; font-size: 12px; }
+
+  /* ── 搜索区 ───────────────────────── */
+  .searchbox { display: flex; gap: 14px; margin: 36px 0 10px; }
+  .input-frame {
+    flex: 1;
+    background: var(--paper-card);
+    border: 1px solid var(--ink-soft);
+    border-radius: 6px;
+    box-shadow: inset 0 0 0 3px var(--paper-card), inset 0 0 0 4px var(--line);
+    display: flex;
+    align-items: center;
+  }
+  textarea {
+    flex: 1;
+    border: none; outline: none; background: transparent;
+    resize: none;
+    font: inherit;
+    font-size: 16.5px;
+    line-height: 1.55;
+    color: var(--ink);
+    padding: 11px 16px;
+    height: 50px;
+  }
+  textarea::placeholder { color: var(--ink-faint); }
+  .btn-seek {
+    width: 48px; height: 48px;
+    flex: none;
+    border: none;
+    border-radius: 6px;
+    background: var(--cinnabar);
+    color: #f7f1e3;
+    font-family: inherit;
+    font-size: 19px;
+    letter-spacing: 0;
+    cursor: pointer;
+    box-shadow: 0 2px 0 var(--cinnabar-dark);
+    transition: transform .1s, box-shadow .1s, background .2s;
+  }
+  .btn-seek:hover { background: var(--cinnabar-dark); }
+  .btn-seek:active { transform: translateY(2px); box-shadow: none; }
+  .btn-seek:disabled { opacity: .55; cursor: wait; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .chips button {
+    font-family: inherit;
+    font-size: 13px;
+    color: var(--ink-soft);
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 5px 13px;
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .chips button:hover { border-color: var(--cinnabar); color: var(--cinnabar); }
+
+  /* ── 结果区 ───────────────────────── */
+  .notice {
+    margin-top: 22px; padding: 10px 16px;
+    border-left: 3px solid var(--cinnabar);
+    background: rgba(177,58,42,.06);
+    color: var(--ink-soft);
+    font-size: 14px; line-height: 1.7;
+    display: none;
+  }
+  .rewritten {
+    margin-top: 22px; padding: 12px 18px;
+    border: 1px dashed var(--ink-faint);
+    border-radius: 4px;
+    color: var(--ink-soft);
+    font-size: 14.5px; line-height: 1.9;
+    display: none;
+  }
+  .rewritten b { color: var(--cinnabar); font-weight: 600; }
+
+  #results { margin-top: 10px; }
+  .deck {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .deck::-webkit-scrollbar { display: none; }
+  .slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    scroll-snap-align: center;
+    position: relative;
+  }
+  .slide .poem { width: 100%; margin-bottom: 6px; }
+  .loading {
+    text-align: center; color: var(--ink-faint);
+    padding: 60px 0; font-size: 16px; letter-spacing: .25em;
+  }
+  .loading .dots::after { content: "…"; animation: blink 1.2s infinite; }
+  @keyframes blink { 50% { opacity: .2; } }
+
+  .poem {
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 26px 30px 22px;
+    margin-top: 22px;
+    box-shadow: 0 1px 2px rgba(60,50,30,.06);
+    animation: rise .45s ease both;
+    position: relative;
+  }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+  .poem-head { text-align: center; }
+  .poem-title {
+    font-family: var(--font-fs);
+    font-size: 20px; font-weight: 400; letter-spacing: .04em;
+  }
+  .poem-meta {
+    display: flex; align-items: baseline; justify-content: center;
+    gap: 9px; flex-wrap: wrap; margin-top: 7px;
+  }
+  .poem-byline { font-family: var(--font-fs); color: var(--ink-soft); font-size: 14.5px; }
+  .poem-meta .sep { color: var(--ink-faint); font-size: 11px; }
+  .poem-score {
+    position: absolute; top: 9px; right: 46px;
+    color: var(--ink-faint);
+    font-size: 11.5px;
+    letter-spacing: .05em;
+    white-space: nowrap;
+    opacity: .85;
+  }
+  .share-btn {
+    position: absolute; top: 8px; right: 10px;
+    width: 28px; height: 28px;
+    display: flex; align-items: center; justify-content: center;
+    background: none; border: 0; padding: 0;
+    color: var(--ink-faint); cursor: pointer; opacity: .8;
+  }
+  .share-btn:hover, .share-btn:active { color: var(--cinnabar); opacity: 1; }
+  .share-img {
+    max-width: 240px; width: 100%;
+    border: 1px solid var(--line); border-radius: 4px;
+    box-shadow: 0 4px 18px rgba(45,42,36,.15);
+    display: block; margin: 12px auto 0;
+  }
+  .share-img[hidden] { display: none; }
+  .modal .row a {
+    display: inline-block; padding: 7px 14px; font-size: 14px;
+    color: var(--cinnabar); text-decoration: none;
+    border: 1px solid var(--line); border-radius: 6px;
+  }
+  #shareGo { background: var(--cinnabar); color: #f7f1e3; border: none; box-shadow: 0 1px 0 var(--cinnabar-dark); }
+  #shareClose { background: transparent; border: none; color: var(--ink-faint); }
+  .poem-body { margin-top: 14px; text-align: center; }
+  .poem-body p {
+    font-family: var(--font-fs);
+    font-size: 16.5px;
+    line-height: 2.05;
+    color: var(--ink);
+  }
+  .deck-wrap { position: relative; }
+  .edge-btn {
+    position: absolute; transform: translateY(-50%);
+    width: 40px; height: 40px; border-radius: 50%;
+    border: 1px solid var(--line); background: rgba(250,246,234,.92);
+    color: var(--ink-soft); font-size: 15px; line-height: 1;
+    cursor: pointer; z-index: 5;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity .25s, border-color .2s, color .2s;
+    box-shadow: 0 2px 8px rgba(60,50,30,.10);
+  }
+  .deck:hover .edge-btn:enabled { opacity: .92; }
+  .edge-btn:hover:enabled { border-color: var(--cinnabar); color: var(--cinnabar); }
+  .edge-btn:disabled { opacity: 0 !important; pointer-events: none; }
+  .edge-btn.left { left: 12px; }
+  .edge-btn.right { right: 12px; }
+
+  .deck-dots {
+    display: flex; align-items: center; justify-content: center;
+    gap: 8px; margin-top: 16px;
+  }
+  .deck-dots button {
+    width: 7px; height: 7px; border-radius: 999px;
+    border: none; padding: 0;
+    background: var(--line);
+    cursor: pointer; transition: all .3s;
+  }
+  .deck-dots button:hover { background: var(--ink-faint); }
+  .deck-dots button.on { width: 24px; background: var(--cinnabar); }
+
+  .deck-cap {
+    text-align: center; color: var(--ink-faint);
+    font-size: 12.5px; margin-top: 10px; letter-spacing: .28em;
+  }
+
+  .empty {
+    text-align: center; color: var(--ink-faint);
+    padding: 70px 0 30px; font-size: 15.5px; letter-spacing: .15em; line-height: 2.2;
+  }
+  .empty .big {
+    font-size: 60px; color: rgba(177,58,42,.16);
+    display: block; margin-bottom: 10px; letter-spacing: 0;
+  }
+
+  /* ── 设置面板 ──────────────────────── */
+  .link-btn {
+    font-family: inherit; font-size: 13.5px; color: var(--ink-soft);
+    background: transparent; border: none; cursor: pointer;
+    border-bottom: 1px dashed var(--ink-faint); padding: 2px 1px;
+  }
+  .link-btn:hover { color: var(--cinnabar); border-bottom-color: var(--cinnabar); }
+  .top-settings {
+    position: absolute; top: 22px; right: 24px; z-index: 10;
+  }
+  .modal-mask {
+    position: fixed; inset: 0; background: rgba(45,42,36,.38);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 50; backdrop-filter: blur(2px);
+  }
+  .modal-mask[hidden] { display: none; }
+  .modal {
+    width: min(460px, calc(100vw - 40px));
+    background: var(--paper-card);
+    border: 1px solid var(--ink-soft);
+    box-shadow: inset 0 0 0 3px var(--paper-card), inset 0 0 0 4px var(--line),
+                0 10px 30px rgba(45,42,36,.25);
+    border-radius: 6px;
+    padding: 26px 28px 22px;
+    animation: rise .25s ease both;
+  }
+  .modal h2 { font-size: 19px; letter-spacing: .12em; font-weight: 600; }
+  .modal .hint { font-size: 12.5px; color: var(--ink-faint); margin: 8px 0 4px; line-height: 1.8; }
+  .modal label { display: block; font-size: 13.5px; color: var(--ink-soft); margin-top: 12px; }
+  .modal input {
+    width: 100%; margin-top: 5px;
+    font-family: inherit; font-size: 14.5px; color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--line); border-radius: 4px;
+    padding: 9px 12px; outline: none;
+  }
+  .modal input:focus { border-color: var(--ink-soft); }
+  .modal .row { display: flex; gap: 10px; margin-top: 18px; align-items: center; }
+  .modal .row button {
+    font-family: inherit; font-size: 14px; cursor: pointer;
+    border-radius: 4px; padding: 8px 18px;
+  }
+  #cfgSave { background: var(--cinnabar); color: #f7f1e3; border: none; box-shadow: 0 1px 0 var(--cinnabar-dark); }
+  #cfgSave:disabled { opacity: .55; }
+  #cfgTest { background: transparent; border: 1px solid var(--ink-faint); color: var(--ink-soft); }
+  #cfgTest:disabled { opacity: .55; }
+  #cfgClose { background: transparent; border: none; color: var(--ink-faint); margin-left: auto; }
+  .cfg-status { margin-top: 12px; font-size: 13px; color: var(--ink-soft); line-height: 1.7; min-height: 1em; }
+  .cfg-status.ok { color: #4a6741; }
+  .cfg-status.err { color: var(--cinnabar); }
+
+  /* ── 页脚与装饰 ────────────────────── */
+  footer {
+    margin-top: auto;
+    padding: 46px 0 14px;
+    text-align: center;
+    color: var(--ink-faint);
+    font-size: 12.5px;
+    letter-spacing: .12em;
+  }
+  .mountains {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    height: 130px;
+    pointer-events: none;
+    z-index: -1;
+  }
+  @media (max-width: 560px) {
+    header { padding-top: 40px; }
+    .subtitle { font-size: 13px; }
+    .top-settings { top: 12px; right: 14px; }
+    .edge-btn { display: none; }   /* 手机用滑动翻卡 */
+    .searchbox { gap: 10px; margin-top: 28px; }
+    textarea { height: 44px; font-size: 15px; padding: 9px 13px; line-height: 1.55; }
+    .btn-seek { width: 44px; height: 44px; font-size: 17px; }
+    .chips { margin-top: 10px; }
+    .chips button { font-size: 12.5px; padding: 4px 11px; }
+    .poem { padding: 20px 16px 14px; }
+    .poem-title { font-size: 18px; }
+    .poem-body p { font-size: 15px; line-height: 1.95; }
+  }
+</style>
+</head>
+<body>
+  <button class="link-btn top-settings" id="openSettings" style="display:none">⚙ 设置</button>
+  <svg class="mountains" viewBox="0 0 1200 130" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,130 L0,95 Q120,40 260,88 Q380,120 520,80 Q660,35 820,92 Q960,128 1080,95 Q1150,78 1200,92 L1200,130 Z"
+          fill="#2d2a24" opacity="0.05"/>
+    <path d="M0,130 L0,112 Q160,72 320,108 Q470,138 640,105 Q820,68 980,112 Q1100,140 1200,116 L1200,130 Z"
+          fill="#2d2a24" opacity="0.07"/>
+  </svg>
+
+  <div class="wrap">
+    <header>
+      <div class="title-row">
+        <h1>一念</h1>
+        <span class="seal">念</span>
+      </div>
+      <div class="subtitle">以心相求<span class="dot">❖</span>得诗一首</div>
+    </header>
+
+    <div class="searchbox">
+      <div class="input-frame">
+        <textarea id="q" placeholder="写下一句心情，如：深夜想家……" maxlength="200"></textarea>
+      </div>
+      <button class="btn-seek" id="go" title="寻诗">寻</button>
+    </div>
+
+    <div class="chips" id="chips">
+      <button>最近有点迷茫，看不清前路</button>
+      <button>深夜加班回家，一个人吃饭</button>
+      <button>项目黄了，半年心血一场空</button>
+      <button>他乡打拼多年，终于要回家了</button>
+    </div>
+
+    <div class="notice" id="notice"></div>
+    <div class="rewritten" id="rewritten"></div>
+    <div id="results">
+      <div class="empty" id="empty">
+        <span class="big">詩</span>
+        心有郁结，难与人言？<br>
+        写下一句，我为你寻一首旧诗。
+      </div>
+    </div>
+
+    <footer id="foot">…</footer>
+  </div>
+
+  <div class="modal-mask" id="settingsModal" hidden>
+    <div class="modal">
+      <h2>⚙ 大模型设置</h2>
+      <p class="hint">
+        供「AI 读心」做查询改写，任一 OpenAI 兼容服务均可（智谱 / DeepSeek / 通义 / SiliconFlow…）。
+        一次改写仅几百 token，费用可忽略。配置保存在本机 llm_config.json，不会上传；
+        三项全部留空并保存即可清除配置。
+      </p>
+      <label>API 地址
+        <input id="cfgBase" placeholder="如 https://open.bigmodel.cn/api/paas/v4">
+      </label>
+      <label>API 密钥
+        <input id="cfgKey" type="password" placeholder="sk-…">
+      </label>
+      <label>模型名
+        <input id="cfgModel" placeholder="如 glm-4-flash / deepseek-chat">
+      </label>
+      <div class="row">
+        <button id="cfgSave">保存</button>
+        <button id="cfgTest">测试</button>
+        <button id="cfgClose">关闭</button>
+      </div>
+      <div class="cfg-status" id="cfgStatus"></div>
+    </div>
+  </div>
+
+  <!-- 分享海报预览：canvas 竖排绘制 → 系统分享 / 长按保存 / 下载 -->
+  <div class="modal-mask" id="shareModal" hidden>
+    <div class="modal">
+      <h2>分享此诗</h2>
+      <img class="share-img" id="shareImg" alt="诗词分享图" hidden>
+      <p class="hint" id="shareHint">研墨绘制中……</p>
+      <div class="row" id="shareRow" hidden>
+        <button id="shareGo">分享给朋友</button>
+        <a id="shareDl" download>下载图片</a>
+        <button id="shareClose">关闭</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const $ = id => document.getElementById(id);
+  const esc = s => s.replace(/[&<>"']/g, c =>
+    ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  // 调试视图：URL 带 ?debug=1 才显示"AI 读心"改写框，正式访问保持神秘
+  const DEBUG = new URLSearchParams(location.search).has('debug');
+
+  fetch('/api/meta').then(r => r.json()).then(m => {
+    $('foot').textContent = DEBUG
+      ? `库中 ${m.num_poems.toLocaleString()} 首 · ${m.num_vectors.toLocaleString()} 条向量 · 模型 ${m.model.split('/').pop()}`
+      : '';   // 正式访问保持神秘：库存与模型只在 ?debug=1 下显示
+  }).catch(() => { $('foot').textContent = ''; });
+
+  document.querySelectorAll('#chips button').forEach(b =>
+    b.addEventListener('click', () => { $('q').value = b.textContent; doSearch(); }));
+
+  $('go').addEventListener('click', doSearch);
+  $('q').addEventListener('keydown', e => {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); doSearch(); }
+  });
+
+  async function doSearch() {
+    const q = $('q').value.trim();
+    if (!q) { $('q').focus(); return; }
+    const ai = true;  // AI 读心：后端未配置 LLM 时自动降级为原句检索（配置经环境变量/启动参数写死，无需界面）
+    $('go').disabled = true;
+    $('notice').style.display = 'none';
+    $('rewritten').style.display = 'none';
+    $('results').innerHTML = '<div class="loading">研墨思忖中<span class="dots"></span></div>';
+
+    try {
+      const resp = await fetch(`/api/search?q=${encodeURIComponent(q)}&top=8&ai=${ai}`);
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      const data = await resp.json();
+
+      if (data.ai_error) {
+        $('notice').textContent = '『 ' + data.ai_error + ' 』';
+        $('notice').style.display = 'block';
+      }
+      if (data.rewritten && DEBUG) {
+        $('rewritten').innerHTML = '<b>AI 读心</b> ── ' + esc(data.rewritten);
+        $('rewritten').style.display = 'block';
+      }
+
+      if (data.results.length) {
+        renderDeck(data.results);
+      } else {
+        $('results').innerHTML = '<div class="empty">未寻得贴切之作，换个说法试试。</div>';
+      }
+    } catch (err) {
+      $('results').innerHTML =
+        `<div class="empty">寻诗不得：${esc(String(err))}<br>请确认后端服务已启动。</div>`;
+    } finally {
+      $('go').disabled = false;
+    }
+  }
+
+  function poemCard(p, i, total) {
+    const lines = p.lines.map(l => `<p>${esc(l)}</p>`).join('');
+    const by = [p.dynasty, p.author].filter(Boolean).join(' · ');
+    const dots = Array.from({ length: total }, (_, k) =>
+      `<button class="${k === i ? 'on' : ''}" data-k="${k}"
+        title="第${cnNum(k + 1)}首" aria-label="第${cnNum(k + 1)}首"></button>`).join('');
+    return `
+      <article class="poem" style="animation-delay:${i * 90}ms">
+        <div class="poem-head">
+          <div class="poem-title">《${esc(p.title)}》</div>
+          <div class="poem-meta">
+            <span class="poem-byline">${esc(by)}〔${esc(p.ptype)}〕</span>
+          </div>
+          <button class="share-btn" data-share="${i}" aria-label="分享此诗" title="分享此诗">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3v11"/><path d="M7.5 7.5 12 3l4.5 4.5"/><path d="M5 13v6h14v-6"/>
+            </svg>
+          </button>
+          ${DEBUG ? `<span class="poem-score">意境相合 ${p.score.toFixed(3)}</span>` : ''}
+        </div>
+        <div class="poem-body">${lines}</div>
+        <button class="edge-btn left" data-go="-1" title="上一首" ${i === 0 ? 'disabled' : ''}>❮</button>
+        <button class="edge-btn right" data-go="1" title="下一首" ${i === total - 1 ? 'disabled' : ''}>❯</button>
+      </article>
+      <div class="deck-dots">${dots}</div>
+      <div class="deck-cap">其${cnNum(i + 1)} · 共${cnNum(total)}首</div>`;
+  }
+
+  /* ── 单卡浏览：滑动/翻页 ── */
+  const CN_DIGITS = ['零', '一', '二', '三', '四', '五', '六', '七', '八', '九'];
+  function cnNum(n) {
+    if (n <= 10) return n === 10 ? '十' : CN_DIGITS[n];
+    if (n < 20) return '十' + (n % 10 ? CN_DIGITS[n % 10] : '');
+    return '二十' + (n % 10 ? CN_DIGITS[n % 10] : '');
+  }
+
+  function curIndex() {
+    const deck = $('deck');
+    return Math.round(deck.scrollLeft / deck.clientWidth);
+  }
+  function slideTo(i) {
+    const deck = $('deck');
+    deck.scrollTo({ left: i * deck.clientWidth, behavior: 'smooth' });
+  }
+  function renderDeck(results) {
+    /* 每张卡自带按钮/墨点/题注：渲染时按各自诗的竖直中点一次性定位按钮，
+       之后滑动/翻页只是平移视口，无需监听滚动事件（事件在部分环境下不可靠） */
+    $('results').innerHTML = `
+      <div class="deck" id="deck">
+        ${results.map((p, i) => `<div class="slide">${poemCard(p, i, results.length)}</div>`).join('')}
+      </div>`;
+    const deck = $('deck');
+    const place = () => [...deck.querySelectorAll('.slide')].forEach(slide => {
+      const poem = slide.querySelector('.poem');
+      slide.querySelectorAll('.edge-btn').forEach(b =>
+        b.style.top = (poem.offsetHeight / 2) + 'px');
+    });
+    place();
+    deck.addEventListener('click', e => {
+      const sb = e.target.closest('.share-btn');
+      if (sb) { sharePoem(results[Number(sb.dataset.share)]); return; }
+      const b = e.target.closest('.edge-btn');
+      if (b) slideTo(curIndex() + Number(b.dataset.go));
+      const d = e.target.closest('.deck-dots button');
+      if (d) slideTo(Number(d.dataset.k));
+    });
+    window.addEventListener('resize', place);
+  }
+
+  document.addEventListener('keydown', e => {
+    if (!$('deck') || (document.activeElement && document.activeElement.tagName === 'TEXTAREA')) return;
+    if (e.key === 'ArrowLeft') slideTo(curIndex() - 1);
+    if (e.key === 'ArrowRight') slideTo(curIndex() + 1);
+  });
+  /* ── 设置面板 ── */
+  const cfgStatus = (msg, cls) => {
+    const el = $('cfgStatus'); el.textContent = msg; el.className = 'cfg-status ' + (cls || '');
+  };
+
+  async function openSettings() {
+    try {
+      const cfg = await (await fetch('/api/llm')).json();
+      $('cfgBase').value = cfg.api_base || '';
+      $('cfgModel').value = cfg.model || '';
+      $('cfgKey').value = '';
+      $('cfgKey').placeholder = cfg.has_key ? '已保存（填新值可覆盖）' : 'sk-…';
+    } catch (e) { /* 面板仍可打开手填 */ }
+    cfgStatus('');
+    $('settingsModal').hidden = false;
+  }
+  $('openSettings').addEventListener('click', openSettings);
+  $('cfgClose').addEventListener('click', () => { $('settingsModal').hidden = true; });
+  $('settingsModal').addEventListener('click', e => {
+    if (e.target === $('settingsModal')) $('settingsModal').hidden = true;
+  });
+
+  /* ── 分享海报：canvas 竖排绘制（零依赖；手机唤起系统分享，桌面下载/长按） ── */
+  const FS_FONT = '"Zhuque Fangsong", "Songti SC", serif';
+  const V_PUNCT = '，。？！；：、…—';
+  let currentShare = null;
+
+  // 竖排断列：按行拆列，长句均分二分
+  function toCols(lines, maxChars) {
+    const cols = [];
+    for (const line of lines) {
+      let s = line;
+      while (s.length > maxChars) {
+        const cut = Math.ceil(s.length / Math.ceil(s.length / maxChars));
+        cols.push(s.slice(0, cut)); s = s.slice(cut);
+      }
+      if (s) cols.push(s);
+    }
+    return cols;
+  }
+
+  // 短诗拆到单句一行（版式舒展）；长词拆后超 11 列则回退整行（走紧凑档）
+  function splitRows(p) {
+    let rows = p.lines.flatMap(l => l.match(/[^，。？！；]+[，。？！；]*/g) || [l]);
+    if (toCols(rows, 12).length > 11) rows = p.lines.slice();
+    return rows;
+  }
+
+  // 竖排单字；标点偏到右上角（简化的竖排标点处理）
+  function vChar(g, ch, x, y) {
+    if (V_PUNCT.includes(ch)) g.fillText(ch, x + 12, y - 6);
+    else g.fillText(ch, x, y);
+  }
+
+  function drawPoster(p, rows) {
+    // 两档版式：标准（≤8 列）/ 紧凑（长词，>8 列自动切档）
+    const compact = toCols(rows, 12).length > 8;
+    const FSZ  = compact ? 24 : 30;   // 诗句字号
+    const CGAP = compact ? 50 : 64;   // 列距
+    const LGAP = compact ? 36 : 46;   // 行内字距
+    const MAXC = compact ? 16 : 12;   // 每列字数
+    const TSZ  = compact ? 30 : 36;   // 标题字号
+    const ASZ  = compact ? 19 : 22;   // 作者字号
+    const TCOL = compact ? 48 : 58;   // 标题列→作者列间距
+    const ACOL = compact ? 44 : 52;   // 作者列→诗句列间距
+    const ARW  = compact ? 28 : 34;   // 作者行距
+
+    const W = 750, PAD = 64, MARGIN_T = 96, FOOT = 110;
+    let allCols = toCols(rows, MAXC);
+    // 保底：紧凑档仍超 11 列时截断（16 字/列 × 11 = 176 字，宋词长调内基本触不到）
+    const MAXCOLS = 11;
+    if (allCols.length > MAXCOLS) allCols = allCols.slice(0, MAXCOLS - 1).concat(['……']);
+    const maxLen = Math.max(...allCols.map(c => c.length), 6);
+    const H = MARGIN_T + maxLen * LGAP + FOOT;
+
+    const cv = document.createElement('canvas');
+    cv.width = W; cv.height = H;
+    const g = cv.getContext('2d');
+
+    // 纸底 + 内框
+    g.fillStyle = '#f4efe1'; g.fillRect(0, 0, W, H);
+    g.strokeStyle = '#d9cfb6'; g.lineWidth = 2;
+    g.strokeRect(28, 28, W - 56, H - 56);
+
+    // 右起：标题列（朱砂）、作者列、诗句列
+    let x = W - PAD - 8;
+    g.textAlign = 'center'; g.textBaseline = 'middle';
+    g.fillStyle = '#b13a2a'; g.font = `${TSZ}px ${FS_FONT}`;
+    [...p.title].forEach((ch, i) => vChar(g, ch, x, MARGIN_T + i * (TSZ + 12) + 10));
+    x -= TCOL;
+    g.fillStyle = '#6b6152'; g.font = `${ASZ}px ${FS_FONT}`;
+    [...(p.dynasty + '·' + p.author)].forEach((ch, i) => vChar(g, ch, x, MARGIN_T + i * ARW));
+    x -= ACOL;
+    g.fillStyle = '#2d2a24'; g.font = `${FSZ}px ${FS_FONT}`;
+    for (const col of allCols) {
+      [...col].forEach((ch, i) => vChar(g, ch, x, MARGIN_T + i * LGAP));
+      x -= CGAP;
+    }
+    // 左下：朱砂「一念」方印（底边距内框 16px）
+    const sx = 70, sy = H - 100;
+    g.fillStyle = '#b13a2a';
+    g.fillRect(sx, sy, 56, 66);
+    g.fillStyle = '#faf6ea'; g.font = `22px ${FS_FONT}`;
+    vChar(g, '一', sx + 28, sy + 16); vChar(g, '念', sx + 28, sy + 40);
+    return cv.toDataURL('image/png');
+  }
+
+  function canShareFiles() {
+    try {
+      return !!(navigator.canShare && navigator.canShare(
+        { files: [new File([new Blob()], 'a.png', { type: 'image/png' })] }));
+    } catch (e) { return false; }
+  }
+
+  async function sharePoem(p) {
+    currentShare = p;
+    $('shareModal').hidden = false;
+    $('shareImg').hidden = true; $('shareRow').hidden = true;
+    $('shareHint').textContent = '研墨绘制中……';
+    try {
+      // 朱雀仿宋是 unicode-range 分片，canvas 绘制前显式加载所需分片
+      await document.fonts.load(`30px ${FS_FONT}`, p.lines.join('') + p.title + p.author + '一念');
+      const url = drawPoster(p, splitRows(p));
+      $('shareImg').src = url; $('shareImg').hidden = false;
+      $('shareDl').href = url; $('shareDl').download = `${p.title}.png`;
+      $('shareGo').hidden = !canShareFiles();
+      $('shareHint').textContent = canShareFiles() ? '' : '长按图片可保存或转发';
+      $('shareRow').hidden = false;
+    } catch (e) {
+      $('shareHint').textContent = '生成失败：' + String(e);
+    }
+  }
+
+  $('shareGo').addEventListener('click', async () => {
+    if (!currentShare) return;
+    try {
+      const blob = await (await fetch($('shareImg').src)).blob();
+      const file = new File([blob], `${currentShare.title}.png`, { type: 'image/png' });
+      await navigator.share({ files: [file], title: '一念 · ' + currentShare.title });
+    } catch (e) { /* 用户取消分享 */ }
+  });
+  $('shareClose').addEventListener('click', () => { $('shareModal').hidden = true; });
+  $('shareModal').addEventListener('click', e => {
+    if (e.target === $('shareModal')) $('shareModal').hidden = true;
+  });
+
+  $('cfgSave').addEventListener('click', async () => {
+    $('cfgSave').disabled = true;
+    cfgStatus('保存中…');
+    try {
+      const resp = await fetch('/api/llm', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          api_base: $('cfgBase').value.trim(),
+          api_key: $('cfgKey').value.trim(),
+          model: $('cfgModel').value.trim(),
+        }),
+      });
+      const d = await resp.json();
+      if (!resp.ok) { cfgStatus(d.detail || '保存失败', 'err'); return; }
+      if (d.configured) {
+        cfgStatus('已保存，「AI 读心」即刻生效。', 'ok');
+        $('cfgKey').value = '';
+        $('cfgKey').placeholder = '已保存（填新值可覆盖）';
+      } else {
+        cfgStatus('已清除配置。', 'ok');
+      }
+    } catch (e) {
+      cfgStatus('保存失败：' + e, 'err');
+    } finally {
+      $('cfgSave').disabled = false;
+    }
+  });
+
+  $('cfgTest').addEventListener('click', async () => {
+    $('cfgTest').disabled = true;
+    cfgStatus('测试中…（让模型改写一句话试试）');
+    try {
+      const resp = await fetch('/api/llm/test', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          api_base: $('cfgBase').value.trim(),
+          api_key: $('cfgKey').value.trim(),
+          model: $('cfgModel').value.trim(),
+        }),
+      });
+      const d = await resp.json();
+      if (d.ok) cfgStatus('连通正常，改写示例：「' + (d.sample || '') + '…」', 'ok');
+      else if (d.detail) cfgStatus(d.detail, 'err');
+      else cfgStatus('连通失败：' + d.error, 'err');
+    } catch (e) {
+      cfgStatus('测试失败：' + e, 'err');
+    } finally {
+      $('cfgTest').disabled = false;
+    }
+  });
+</script>
+</body>
+</html>

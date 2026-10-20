@@ -1,0 +1,46 @@
+# ── 密钥/配置（绝不能提交）──
+embedding_config.json
+llm_config.json
+scoring_config.json
+famous_poems.json
+
+# ── 大型数据文件（不在 git 里管理，用 rsync/scp 传输）──
+*.db
+*.db-shm
+*.db-wal
+poetry_full.db
+poetry_lite.db
+index_full/
+index_lite/
+models/
+
+# ── 向量/嵌入缓存 ──
+cache/
+*.npy
+
+# ── Python ──
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# ── 系统文件 ──
+.DS_Store
+Thumbs.db
+
+# ── 临时/日志 ──
+*.log
+nohup.out
+/tmp/
+
+workbuddy/
+.zcodeignore
+
+make_*.py
+selection_data/
+cloudflare/
+analysis/
+
+DEPLOY_STEPS.md
+DESIGN.md
